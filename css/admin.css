@@ -1,0 +1,22 @@
+.admin-panel {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.admin-panel h1 {
+    color: #333;
+}
+
+.admin-panel .button {
+    background-color: #5c5cff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.admin-panel .button:hover {
+    background-color: #4a4acb;
+}
