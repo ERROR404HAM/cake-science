@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Cake Science</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <h2>⚙️ Admin Panel</h2>
+            </div>
+            <nav class="admin-menu">
+                <a href="#" class="menu-item active" data-panel="dashboard">Dashboard</a>
+                <a href="#" class="menu-item" data-panel="content">Content</a>
+                <a href="#" class="menu-item" data-panel="courses">Courses</a>
+                <button class="logout-btn" onclick="alert('Logout clicked')">Logout</button>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Login Panel -->
+            <div id="loginPanel" class="admin-panel active">
+                <div class="login-box">
+                    <h1>🔐 Admin Login</h1>
+                    <form class="form" onsubmit="alert('Login functionality requires Firebase'); return false;">
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Password" required>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Dashboard Panel -->
+            <div id="dashboardPanel" class="admin-panel">
+                <h1>📊 Dashboard</h1>
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <h3>Total Courses</h3>
+                        <p>0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Reviews</h3>
+                        <p>0</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Panel -->
+            <div id="contentPanel" class="admin-panel">
+                <h1>📝 Content Management</h1>
+                <div class="content-section">
+                    <h2>Edit Hero Section</h2>
+                    <form class="form" onsubmit="alert('Update successful'); return false;">
+                        <input type="text" placeholder="Hero Title" required>
+                        <textarea placeholder="Hero Subtitle" required></textarea>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Courses Panel -->
+            <div id="coursesPanel" class="admin-panel">
+                <h1>🎓 Course Management</h1>
+                <div class="content-section">
+                    <h2>Add New Course</h2>
+                    <form class="form" onsubmit="alert('Course added'); return false;">
+                        <input type="text" placeholder="Course Title" required>
+                        <textarea placeholder="Description" required></textarea>
+                        <input type="number" placeholder="Price" required>
+                        <button type="submit" class="btn btn-primary">Add Course</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

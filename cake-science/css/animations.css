@@ -1,0 +1,26 @@
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.hero-content { animation: slideInLeft 0.8s ease-out; }
+.hero-image { animation: float 3s ease-in-out infinite; }
+.course-card { animation: fadeIn 0.6s ease-out; }
+.review-card { animation: fadeIn 0.6s ease-out; }
+
+html { scroll-behavior: smooth; }
